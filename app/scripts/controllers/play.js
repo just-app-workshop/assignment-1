@@ -27,9 +27,8 @@ angular.module('assignment1App')
 
     function odd(arr){
       var temp=arr.slice(0);
-      angular.copy(arr, temp);
       for (var i=0;i<temp.length; i++){
-        if(temp[i] % 2 === 0){
+        while((temp[i] % 2) === 0){
           temp.splice(i,1);
         }
       }
@@ -40,9 +39,8 @@ angular.module('assignment1App')
 
     function even(arr){
       var temp=arr.slice(0);
-      angular.copy(arr, temp);
       for(var i=0; i<temp.length; i++){
-        if(temp[i] % 2 !== 0){
+        while(!((temp[i] % 2 )=== 0)){
           temp.splice(i,1);
         }
       }
