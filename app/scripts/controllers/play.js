@@ -26,28 +26,35 @@ angular.module('assignment1App')
     this.sortedNumbers = sortedNumbers;
 
     function odd(arr){
-
-      // TODO: remove even values
-      var result = arr;
+      var temp=arr.slice(0);
+      for (var i=0;i<temp.length; i++){
+        while((temp[i] % 2) === 0){
+          temp.splice(i,1);
+        }
+      }
+      var result = temp;
 
       return result;
     }
 
     function even(arr){
-
-      // TODO: remove odd values
-      var result = arr;
+      var temp=arr.slice(0);
+      for(var i=0; i<temp.length; i++){
+        while(!((temp[i] % 2 )=== 0)){
+          temp.splice(i,1);
+        }
+      }
+      var result = temp;
 
       return result;
     }
 
     function sort(arr){
-
-      // TODO: sort the values
-      var result = arr;
+      var temp=arr.slice(0);
+      temp.sort(function(a, b){return a-b;});
+      var result = temp;
 
       return result;
-
     }
 
   });
