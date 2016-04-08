@@ -18,8 +18,8 @@ angular.module('assignment1App')
     ];
 
     this.numbers = numbers;
-    this.oddNumbers = numbers.filter(function(a) { return a % 2 === 0; });
-    this.evenNumbers = numbers.filter(function(a) { return a % 2 === 1; });
+    this.oddNumbers = numbers.filter(function(a) { return a % 2 === 1; });
+    this.evenNumbers = numbers.filter(function(a) { return a % 2 === 0; });
     this.sortedNumbers = numbers.sort(function(a, b){ return a - b }); //or return b-a for descending
 
   });
