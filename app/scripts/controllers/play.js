@@ -10,9 +10,6 @@
 angular.module('assignment1App')
   .controller('PlayCtrl', function () {
     var numbers = [ 2, 5, 23, 14, 11, 66, 3, 32, 77, 0];
-    var oddNumbers = odd(numbers);
-    var evenNumbers = even(numbers);
-    var sortedNumbers = sort(numbers);
 
     this.awesomeThings = [
       'HTML5 Boilerplate',
@@ -21,33 +18,8 @@ angular.module('assignment1App')
     ];
 
     this.numbers = numbers;
-    this.oddNumbers = oddNumbers;
-    this.evenNumbers = evenNumbers;
-    this.sortedNumbers = sortedNumbers;
-
-    function odd(arr){
-
-      // TODO: remove even values
-      var result = arr;
-
-      return result;
-    }
-
-    function even(arr){
-
-      // TODO: remove odd values
-      var result = arr;
-
-      return result;
-    }
-
-    function sort(arr){
-
-      // TODO: sort the values
-      var result = arr;
-
-      return result;
-
-    }
+    this.oddNumbers = numbers.filter(function(a) { return a % 2 === 0; });
+    this.evenNumbers = numbers.filter(function(a) { return a % 2 === 1; });
+    this.sortedNumbers = numbers.sort(function(a, b){ return a - b }); //or return b-a for descending
 
   });
