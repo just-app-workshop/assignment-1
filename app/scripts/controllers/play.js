@@ -27,24 +27,42 @@ angular.module('assignment1App')
 
     function odd(arr){
 
-      // TODO: remove even values
-      var result = arr;
+      var result=[];
+
+      for(var i=0; i<arr.length; i++){
+
+        if( (arr[i] % 2) === 1 ){ //number mod 2 === 1 it's odd
+          result.push(arr[i]);
+        }
+
+      }
 
       return result;
+
     }
 
     function even(arr){
 
       // TODO: remove odd values
-      var result = arr;
+      var result = [];
+
+      for(var i=0; i<arr.length; i++){
+
+        if( (arr[i] % 2) === 0 ){ //number mod 2 === 0 it's even
+          result.push(arr[i]);
+        }
+
+      }
 
       return result;
     }
+
 
     function sort(arr){
 
       // TODO: sort the values
       var result = arr;
+      result.sort(function(a, b){return b-a});
 
       return result;
 
