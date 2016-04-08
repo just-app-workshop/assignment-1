@@ -38,4 +38,18 @@
       <li ng-repeat="e in play.sortedCollectionByName">{{e.name}} : {{e.score}}</li>
     </ul>
   </div>
+
+  <h2>Array by Reference</h2>
+  <div style="float:left; width: 50%">
+    <h3>Initial</h3>
+    <ul>
+      <li ng-repeat="e in play.numbersByRef">{{e}}</li>
+    </ul>
+  </div>
+  <div style="float:left; width: 50%">
+    <h3>Sorted by score</h3>
+    <ul>
+      <li ng-repeat="e in play.sortedNumbersByRef">{{e}}</li>
+    </ul>
+  </div>
 </div>

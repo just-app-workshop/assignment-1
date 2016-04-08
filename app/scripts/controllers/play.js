@@ -11,6 +11,8 @@ angular.module('assignment1App')
   .controller('PlayCtrl', function () {
     var numbers = [ 2, 5, 23, 14, 11, 66, 3, 32, 77, 0];
 
+    var numbersByRef = [ 2, 5, 23, 14, 11, 66, 3, 32, 77, 0];
+
     var collection = [
       {
         name: 'Steve',
@@ -39,6 +41,8 @@ angular.module('assignment1App')
     var sortedCollectionByScore = sortCollectionByScore(collection);
     var sortedCollectionByName = sortCollectionByName(collection);
 
+    var sortedNumbersByRef = sortByRef(numbersByRef);
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -53,6 +57,9 @@ angular.module('assignment1App')
     this.collection = collection;
     this.sortedCollectionByScore = sortedCollectionByScore;
     this.sortedCollectionByName = sortedCollectionByName;
+
+    this.numbersByRef = numbersByRef;
+    this.sortedNumbersByRef = sortedNumbersByRef;
 
     function odd(arr){
       return _.filter(arr, function(element){
@@ -82,6 +89,14 @@ angular.module('assignment1App')
       return _.sortBy(collection, function(element){
         return element.name; }
       );
+    }
+
+    function sortByRef(arr){
+      arr = arr.sort(function(a, b) {
+        return a - b;
+      });
+
+      return arr;
     }
 
   });
