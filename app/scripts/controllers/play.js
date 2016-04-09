@@ -99,4 +99,23 @@ angular.module('assignment1App')
       return arr;
     }
 
+    //
+    // Objects reference
+    //
+
+    var objA = {
+      title: 'foo',
+      description: 'bar',
+      value: 10
+    }
+
+    var objB = objA;
+    var objC = objB;
+
+    objC.title = 'buz';
+    objC.value = 20;
+
+    this.objA = objA;
+    this.objB = objB;
+    this.objC = objC;
   });

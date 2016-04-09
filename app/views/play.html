@@ -1,4 +1,5 @@
 <div ng-controller="PlayCtrl">
+
   <h3>Numbers</h3>
   <ul>
     <li ng-repeat="n in play.numbers">{{n}}</li>
@@ -52,4 +53,33 @@
       <li ng-repeat="e in play.sortedNumbersByRef">{{e}}</li>
     </ul>
   </div>
-</div>
+
+  <h2>Collection</h2>
+  <div style="float:left; width: 33%">
+    <h3>Obj A</h3>
+    <ul>
+      <li>{{play.objA.title}}</li>
+      <li>{{play.objA.description}}</li>
+      <li>{{play.objA.value}}</li>
+    </ul>
+  </div>
+
+  <div style="float:left; width: 33%">
+    <h3>Obj B</h3>
+    <ul>
+      <li>{{play.objB.title}}</li>
+      <li>{{play.objB.description}}</li>
+      <li>{{play.objB.value}}</li>
+    </ul>
+  </div>
+
+  <div style="float:left; width: 33%">
+    <h3>Obj C</h3>
+    <ul>
+      <li>{{play.objC.title}}</li>
+      <li>{{play.objC.description}}</li>
+      <li>{{play.objC.value}}</li>
+    </ul>
+  </div>
+
+</div> <!-- /ng-controller -->
