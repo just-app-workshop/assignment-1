@@ -28,7 +28,7 @@ angular.module('assignment1App')
     function odd(arr){
 
       // TODO: remove even values
-      var result = arr.filter(function(a) { return (a & 1) === 0; });
+      var result = arr.filter(function(a) { return (a & 1) === 1; });
 
       return result;
     }
@@ -36,7 +36,7 @@ angular.module('assignment1App')
     function even(arr){
 
       // TODO: remove odd values
-      var result = arr.filter(function(a) { return (a & 1) === 1; });
+      var result = arr.filter(function(a) { return (a & 1) === 0; });
 
       return result;
     }
