@@ -1,0 +1,18 @@
+<div ng-controller="CallbackCtrl">
+  <h2>The Hitchhiker's Guide to the Galaxy</h2>
+  <p>The Answer to the Ultimate Question of Life, the Universe, and Everything</p>
+
+  <p ng-show="callback.theAnswer" style="text-align: center; font-size: 48px;" ng-bind="callback.theAnswer">
+
+  </p>
+
+  <p ng-hide="callback.theAnswer" style="text-align: center; font-size: 24px;">
+    Calculating ...
+  </p>
+
+  <blockquote>
+    "Six by nine. Forty two."<br/>
+    "That's it. That's all there is."<br/>
+    "I always thought something was fundamentally wrong with the universe"
+  </blockquote>
+</div>

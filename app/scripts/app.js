@@ -29,6 +29,11 @@ angular
         controller: 'CitizensCtrl',
         controllerAs: 'citizens'
       })
+      .when('/callback', {
+        templateUrl: 'views/callback.html',
+        controller: 'CallbackCtrl',
+        controllerAs: 'callback'
+      })
       .otherwise({
         redirectTo: '/'
       });
